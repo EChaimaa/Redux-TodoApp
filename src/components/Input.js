@@ -1,11 +1,25 @@
 import React, { useState } from "react";
 import "./Input.css";
+import { useDispatch } from "react-redux";
+import { saveTodo } from "../features/todoSlice";
 
 function Input() {
   //declarations
   const [input, setInput] = useState("");
+  const dispatch = useDispatch();
+
   //methods
-  const addTodo = () => {};
+  const addTodo = () => {
+    dispatch(
+      saveTodo({
+        item: input,
+        done: false,
+        id: Date.now(),
+      })
+    );
+
+    setInput("");
+  };
 
   return (
     <div className="input">
