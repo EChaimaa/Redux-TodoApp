@@ -9,8 +9,12 @@ function Input() {
 
   return (
     <div className="input">
-      <input type="text"></input>
-      <button onClick={addTodo}>Add 📅</button>
+      <input
+        type="text"
+        value={input}
+        onChange={(e) => setInput(e.target.value)}
+      ></input>
+      <button onClick={addTodo}>ADD ✅</button>
     </div>
   );
 }

@@ -5,7 +5,7 @@ import Input from "./components/Input";
 function App() {
   return (
     <div className="app">
-      <h1>Hello clever programmers 🚀🔥</h1>
+      <h1>My Todo App 📌📅</h1>
       <Input></Input>
     </div>
   );
